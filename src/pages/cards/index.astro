@@ -1,0 +1,13 @@
+---
+import { CardsRender } from "@/components/CardsRender";
+import { Spinner } from "@/components/Spinner";
+import Layout from "@/layouts/Layout.astro";
+
+---
+
+<Layout title="Cards">
+    <Spinner client:idle/>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <CardsRender client:only/>
+    </div>
+</Layout>

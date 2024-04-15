@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+
+const projects = [
+  {
+    name: "Mangaflow",
+    url: "https://mangaflow.onrender.com/",
+  },
+  {
+    name: "Publix",
+    url: "https://play.google.com/store/apps/details?id=com.publix.app",
+  },
+  {
+    name: "Movieflow",
+    url: "https://play.google.com/store/apps/details?id=com.movieflow.spanish.app",
+  },
+  {
+    name: "All Projects",
+    url: "https://play.google.com/store/apps/dev?id=5036101276172699508",
+  },
+];
+
+const nowDate = new Date().getFullYear();
+---
+
+<footer class="mt-auto p-4 text-sm text-neutral-400 pt-16">
+    <hr class="border-zinc-400 mb-16 max-w-sm mx-auto" />
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="flex gap-8">
+      <h3 class="font-semibold text-white mb-2">Projects</h3>
+      <div class="flex flex-col gap-1">
+        {
+          projects?.map((project) => {
+            return (
+              <a href={project.url} target="_blank" rel="noreferrer">
+                {project.name}
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+    <div class="flex gap-8">
+      <h3 class="font-semibold text-white mb-2">Contact</h3>
+      <div class="flex flex-col gap-1">
+        <a href="https://twitter.com/pasabaaa" target="_blank" rel="noreferrer">
+          X
+        </a>
+        <a
+          href="https://instagram.com/pasabaaa"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
+        <a href="mailto:pasabaa2@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="flex gap-8">
+      <h3 class="font-semibold text-white mb-2">Policies</h3>
+      <a href={"/privacy"}>Privacy Policy</a>
+    </div>
+    <div class="flex gap-8">
+      <h3 class="font-semibold text-white mb-2">Store</h3>
+      <a href="https://www.hetzz.store/" target="_blank" rel="noreferrer"
+        >hetzz Store</a
+      >
+    </div>
+    <div class="flex items-center justify-center h-40 col-span-full">
+      <div class="flex flex-col gap-4 items-center justify-center text-center">
+        <a href={"/"}>
+          <Image
+            width={80}
+            height={80}
+            src="https://res.cloudinary.com/dvuqzso8k/image/upload/v1712954200/hetzz-ui/hetzzUI-logo-white_gayk2d.png"
+            alt="Aniflow Logo"
+          />
+        </a>
+        <p>
+          hetzz UI {nowDate} | <span class="text-white font-semibold"
+            >hetzz</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

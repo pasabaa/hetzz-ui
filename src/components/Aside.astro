@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+
+
+---
+
+<aside class="sticky top-0 md:justify-start md:max-w-[12rem] w-full py-4">
+  <section class="bg-neutral-800/50 rounded-2xl p-4 flex flex-col gap-4">
+    <a href="/"><Image
+      width={50}
+      height={50}
+      src="https://res.cloudinary.com/dvuqzso8k/image/upload/v1712954200/hetzz-ui/hetzzUI-logo-white_gayk2d.png"
+      alt="Aniflow Logo"
+    /></a>
+    <hr class="border-neutral-500" />
+    <div class="flex flex-col gap-2">
+      <h3 class="font-medium">Elements</h3>
+      <a class="text-neutral-400 text-sm" href="/cards">Cards</a>
+      <a class="text-neutral-400 text-sm" href="/">Buttons</a>
+    </div>
+  </section>
+</aside>
